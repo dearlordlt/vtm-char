@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from './character';
 
 @Component({
   selector: 'app-character',
@@ -7,17 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  character = {
-    name: '',
-    ambition: '',
-    clan: '',
-    concept: '',
-    desire: '',
-    generation: '',
-    chronicle: '',
-    predator: '',
-    sire: ''
-  };
+  character: Character = new Character();
 
   constructor() {
   }

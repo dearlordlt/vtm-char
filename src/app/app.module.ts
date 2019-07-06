@@ -5,15 +5,17 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CharacterComponent } from './Character/character/character.component';
+import { CharacterComponent } from './Character/character.component';
 import { HomeComponent } from './Home/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterComponent,
-    HomeComponent
+    HomeComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

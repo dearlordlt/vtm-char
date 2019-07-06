@@ -1,5 +1,5 @@
 import { HomeComponent } from './Home/home/home.component';
-import { CharacterComponent } from './Character/character/character.component';
+import { CharacterComponent } from './Character/character.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
