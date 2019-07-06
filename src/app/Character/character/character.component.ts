@@ -7,7 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  constructor() { }
+  character = {
+    name: '',
+    ambition: '',
+    clan: '',
+    concept: '',
+    desire: '',
+    generation: '',
+    chronicle: '',
+    predator: '',
+    sire: ''
+  };
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

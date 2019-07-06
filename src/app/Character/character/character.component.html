@@ -1,3 +1,55 @@
-<p>
-  character works!
-</p>
+<mat-grid-list cols="3" rowHeight="65px">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>{{ character.name }}</mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="3" rowHeight="65px">
+  <mat-grid-tile>
+    <mat-form-field class="example-full-width">
+      <input matInput type="text" placeholder="Name" [(ngModel)]="character.name">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Ambition" [(ngModel)]="character.ambition">
+      </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Clan" [(ngModel)]="character.clan">
+      </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Concept" [(ngModel)]="character.concept">
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Desire" [(ngModel)]="character.desire">
+        </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Generation" [(ngModel)]="character.generation">
+        </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" placeholder="Chronicle" [(ngModel)]="character.chronicle">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Predator" [(ngModel)]="character.predator">
+          </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Sire" [(ngModel)]="character.sire">
+          </mat-form-field>
+      </mat-grid-tile>
+</mat-grid-list>
