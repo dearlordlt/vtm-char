@@ -56,23 +56,27 @@
 
 <mat-divider></mat-divider>
 
-<mat-grid-list cols="3" rowHeight="65px">
+<mat-grid-list cols="3" rowHeight="35px">
     <mat-grid-tile>***</mat-grid-tile>
     <mat-grid-tile>Attributes</mat-grid-tile>
     <mat-grid-tile>***</mat-grid-tile>
 
-    <mat-grid-tile>Strength</mat-grid-tile>
-    <mat-grid-tile>Charisma</mat-grid-tile>
-    <mat-grid-tile>Intelligence</mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Strength <app-rating [(rating)]="character.attributes.strenght"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Charisma <app-rating [(rating)]="character.attributes.charisma"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Intelligence <app-rating [(rating)]="character.attributes.intelligence"></app-rating></mat-grid-tile>
 
-    <mat-grid-tile>Dexterity</mat-grid-tile>
-    <mat-grid-tile>Manipulation</mat-grid-tile>
-    <mat-grid-tile>Wits</mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Dexterity <app-rating [(rating)]="character.attributes.dexterity"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Manipulation <app-rating [(rating)]="character.attributes.manipulation"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Wits <app-rating [(rating)]="character.attributes.wits"></app-rating></mat-grid-tile>
 
-    <mat-grid-tile>Stamina</mat-grid-tile>
-    <mat-grid-tile>Composure</mat-grid-tile>
-    <mat-grid-tile>Resolve</mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Stamina <app-rating [(rating)]="character.attributes.stamina"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Composure <app-rating [(rating)]="character.attributes.composure"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute">Resolve <app-rating [(rating)]="character.attributes.resolve"></app-rating></mat-grid-tile>
 </mat-grid-list>
+
+<pre>a
+  {{ test }}
+</pre>
 
 <pre>
   {{ character | json }}

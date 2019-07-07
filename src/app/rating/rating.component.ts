@@ -8,23 +8,25 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 export class RatingComponent implements OnInit {
 
   @Input() rating: number;
-  @Input() itemId: number;
-  @Output() ratingClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() ratingChange = new EventEmitter<number>();
 
-  inputName: string;
+  setRating(val: number) {
+    this.rating = val;
+  }
 
   constructor() { }
 
-  ngOnInit() {
-    this.inputName = this.itemId + '_rating';
+  onDataChange() {
+    this.ratingChange.emit(this.rating);
+    console.log(this.rating);
   }
 
-  onClick(rating: number): void {
-    this.rating = rating;
-    this.ratingClick.emit({
-      itemId: this.itemId,
-      rating
-    });
+  updateRating(val: number) {
+    this.rating = val;
+    this.ratingChange.emit(this.rating);
+    console.log(this.rating);
   }
+
+  ngOnInit() { }
 
 }

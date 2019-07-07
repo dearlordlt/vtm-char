@@ -11,7 +11,7 @@ export class Character {
   attributes: Attributes;
 }
 
-class Attributes {
+export class Attributes {
   strenght: number;
   dexterity: number;
   stamina: number;

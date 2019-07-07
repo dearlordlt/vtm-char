@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Character } from './character';
+import { Character, Attributes } from './character';
 
 @Component({
   selector: 'app-character',
@@ -9,8 +9,10 @@ import { Character } from './character';
 export class CharacterComponent implements OnInit {
 
   character: Character = new Character();
+  test: number;
 
   constructor() {
+    this.character.attributes = new Attributes();
   }
 
   ngOnInit() {
