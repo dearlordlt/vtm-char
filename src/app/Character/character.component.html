@@ -57,27 +57,21 @@
 <mat-divider></mat-divider>
 
 <mat-grid-list cols="3" rowHeight="35px">
-    <mat-grid-tile>***</mat-grid-tile>
-    <mat-grid-tile>Attributes</mat-grid-tile>
-    <mat-grid-tile>***</mat-grid-tile>
+    <mat-grid-tile>{{ (character.attributes.strenght || 0) + (character.attributes.dexterity || 0) + (character.attributes.stamina || 0) }}</mat-grid-tile>
+    <mat-grid-tile>{{ (character.attributes.charisma || 0) + (character.attributes.manipulation || 0) + (character.attributes.composure || 0) }}</mat-grid-tile>
+    <mat-grid-tile>{{ (character.attributes.intelligence || 0) + (character.attributes.wits || 0) + (character.attributes.resolve || 0) }}</mat-grid-tile>
 
-    <mat-grid-tile class="tile-attribute">Strength <app-rating [(rating)]="character.attributes.strenght"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Charisma <app-rating [(rating)]="character.attributes.charisma"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Intelligence <app-rating [(rating)]="character.attributes.intelligence"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Strength" [(rating)]="character.attributes.strenght"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Charisma" [(rating)]="character.attributes.charisma"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Intelligence" [(rating)]="character.attributes.intelligence"></app-rating></mat-grid-tile>
 
-    <mat-grid-tile class="tile-attribute">Dexterity <app-rating [(rating)]="character.attributes.dexterity"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Manipulation <app-rating [(rating)]="character.attributes.manipulation"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Wits <app-rating [(rating)]="character.attributes.wits"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Dexterity" [(rating)]="character.attributes.dexterity"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Manipulation" [(rating)]="character.attributes.manipulation"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Wits" [(rating)]="character.attributes.wits"></app-rating></mat-grid-tile>
 
-    <mat-grid-tile class="tile-attribute">Stamina <app-rating [(rating)]="character.attributes.stamina"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Composure <app-rating [(rating)]="character.attributes.composure"></app-rating></mat-grid-tile>
-    <mat-grid-tile class="tile-attribute">Resolve <app-rating [(rating)]="character.attributes.resolve"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Stamina" [(rating)]="character.attributes.stamina"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Composure" [(rating)]="character.attributes.composure"></app-rating></mat-grid-tile>
+    <mat-grid-tile class="tile-attribute"><app-rating label="Resolve" [(rating)]="character.attributes.resolve"></app-rating></mat-grid-tile>
 </mat-grid-list>
 
-<pre>a
-  {{ test }}
-</pre>
-
-<pre>
-  {{ character | json }}
-</pre>
+<pre>{{ character | json }}</pre>

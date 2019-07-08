@@ -1,4 +1,5 @@
 <fieldset class="rating">
+  <a (click)=updateRating(0)><label>{{ label || '' }}</label></a>
   <input type="radio" [checked]="rating >= 1" (click)=updateRating(1) />
   <input type="radio" [checked]="rating >= 2" (click)=updateRating(2) />
   <input type="radio" [checked]="rating >= 3" (click)=updateRating(3) />
