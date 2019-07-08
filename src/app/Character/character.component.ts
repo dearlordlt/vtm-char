@@ -11,11 +11,10 @@ export class CharacterComponent implements OnInit {
   character: Character = new Character();
   test: number;
 
-  constructor() {
-    this.character.attributes = new Attributes();
-  }
+  constructor() { }
 
   ngOnInit() {
+    this.character.attributes = new Attributes();
   }
 
 }
